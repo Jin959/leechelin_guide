@@ -7,13 +7,13 @@ const StyledIntro = styled.div`
   height: 100vh;
   overflow: hidden;
   ${mixins.flexContainer("column", "center")}
+  gap: 3rem;
 `;
+export default StyledIntro;
 
 export const Title = styled.div`
-  font-size: 48px;
-
+  font-size: 2rem;
   margin-bottom: 50px;
-
   animation: 1s ${animations.silding("50vw")} ease-in-out;
 `;
 
@@ -58,11 +58,13 @@ export const ImgWrapper = styled.div`
 `;
 
 export const BtnContainer = styled.div`
-  margin: 0 auto;
-  border: 5px solid black;
-  border-radius: 20px;
-  padding: 1rem;
+  margin: 0 2rem;
   animation: 1s ${animations.silding("0", "0", "50vw")} ease-in-out;
+  & * {
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
 
   & :hover {
     color: white;
@@ -70,5 +72,3 @@ export const BtnContainer = styled.div`
     background-color: black;
   }
 `;
-
-export default StyledIntro;

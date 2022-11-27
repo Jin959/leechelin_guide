@@ -32,6 +32,20 @@ const animations = {
       transform: translate(${endX}, ${endY}) rotate(360deg);
     }
   `,
+
+  scaleWithRotation: (
+    scaleStart = "0.5",
+    scaleEnd = "1",
+    rotateStart = "0",
+    rotateEnd = "360deg",
+  ) => keyframes`
+    from {
+      transform: scale(${scaleStart}, ${scaleStart}) rotate(${rotateStart})
+    }
+    to {
+      transform: scale(${scaleEnd}, ${scaleEnd}), rotate(${rotateEnd});
+    }
+  `,
 };
 
 export default animations;

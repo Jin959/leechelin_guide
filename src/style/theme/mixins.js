@@ -7,8 +7,8 @@ const mixins = {
   ) => `
     display: flex;
     flex-direction: ${direction};
-    align-items: ${alignItem};
     justify-content: ${justifyContent};
+    align-items: ${alignItem};    
   `,
 };
 export default mixins;
