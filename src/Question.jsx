@@ -20,16 +20,15 @@ const Question = () => {
   };
   const tagList = [
     "일식",
-    "중식",
-    "양식",
+    "중화요리",
+    "파스타",
     "한식",
-    "백반",
+    "가정식백반",
     "분식",
-    "태국",
+    "타이",
     "패스트푸드",
-    "불맛",
-    "단짠",
-    "매콤",
+    "갈비탕",
+    "쌀국수",
     "커피",
     "차",
     "담백한",
@@ -55,11 +54,11 @@ const Question = () => {
   const onIdeaInputSubmit = (e) => {
     e.preventDefault();
     const inputValue = ideaInput.current.value;
-    navigate(`/result?${userLocation.current}&query=${inputValue}%20맛집`);
+    navigate(`/result?${userLocation.current}&query=${inputValue}`);
   };
   const onNoIdeaSubmitClick = () => {
     const tags = taggedList.join(" ");
-    navigate(`/result?${userLocation.current}&query=${tags}%20맛집`);
+    navigate(`/result?${userLocation.current}&query=${tags}`);
   };
 
   const onTagBtnClick = (e) => {
