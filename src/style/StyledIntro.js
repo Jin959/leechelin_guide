@@ -2,14 +2,13 @@ import styled, { css } from "styled-components";
 import mixins from "./theme/mixins";
 import animations from "./theme/anmations";
 
-const StyledIntro = styled.div`
+export const StyledIntro = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   ${mixins.flexContainer("column", "center")}
   gap: 3rem;
 `;
-export default StyledIntro;
 
 export const Title = styled.div`
   font-size: 2rem;

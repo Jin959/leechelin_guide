@@ -1,12 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const StyledMap = styled.div`
-  width: 100vw;
-  height: 100%;
-
-  @media screen and (max-width: 800px) {
-    overflow: scroll;
-  }
+export const StyledMap = styled.div`
+  width: 30vw;
+  height: 50vh;
 `;
-
-export default StyledMap;

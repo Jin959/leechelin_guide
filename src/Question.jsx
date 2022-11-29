@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import StyledQuestion, {
+import {
+  StyledQuestion,
   FormContainer,
   BtnContainer,
   Asking,
@@ -12,7 +13,7 @@ const Question = () => {
   const [questionState, setQuestionState] = useState("initial");
   const navigate = useNavigate();
   const ideaInput = useRef();
-  const userLocation = useRef('');
+  const userLocation = useRef("");
   const questions = {
     initial: "먹고 싶은 게 있나요?",
     haveIdea: "무슨 메뉴인가요??",
@@ -46,11 +47,11 @@ const Question = () => {
   const getLocation = (position) => {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    userLocation.current += `lat=${lat}&lon=${lon}`
-  }
+    userLocation.current += `lat=${lat}&lon=${lon}`;
+  };
   const onErrorLocation = () => {
-    window.alert('브라우저 위치 접근 권한을 켜주세요');
-  }
+    window.alert("브라우저 위치 접근 권한을 켜주세요");
+  };
   const onIdeaInputSubmit = (e) => {
     e.preventDefault();
     const inputValue = ideaInput.current.value;
@@ -76,10 +77,9 @@ const Question = () => {
     console.log(taggedList);
   };
 
-  useEffect(() => {  
+  useEffect(() => {
     navigator.geolocation.getCurrentPosition(getLocation, onErrorLocation);
-  }, [])
-  
+  }, []);
 
   return (
     <StyledQuestion>
@@ -121,10 +121,12 @@ const Question = () => {
         </BtnContainer>
       )}
       <BtnContainer>
-        {questionState === "noIdea" && (
-          <button type="button" onClick={onNoIdeaSubmitClick}>다 골랐어요!</button>
-        )}
         <Link to="/">처음부터 다시 할래요!</Link>
+        {questionState === "noIdea" && (
+          <button type="button" onClick={onNoIdeaSubmitClick}>
+            다 골랐어요!
+          </button>
+        )}
       </BtnContainer>
     </StyledQuestion>
   );

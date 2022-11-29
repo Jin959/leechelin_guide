@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import mixins from "./theme/mixins";
 import animations from "./theme/anmations";
 
-const StyledQuestion = styled.div`
+export const StyledQuestion = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -12,7 +12,6 @@ const StyledQuestion = styled.div`
     overflow: scroll;
   }
 `;
-export default StyledQuestion;
 
 export const Asking = styled.div`
   padding-right: 3rem;
@@ -31,6 +30,7 @@ export const BtnContainer = styled.div`
     border: 5px solid black;
     border-radius: 20px;
     padding: 0.5rem;
+    ${mixins.flexContainer("row", "center", "center")};
   }
 
   & > :hover {

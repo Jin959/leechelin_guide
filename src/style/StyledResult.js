@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import mixins from "./theme/mixins";
 import animations from "./theme/anmations";
 
-const StyledResult = styled.div`
+export const StyledResult = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  ${mixins.flexContainer("column", "space-around")}
+  ${mixins.flexContainer("column", "space-around", "center")}
 
   @media screen and (max-width: 800px) {
     overflow: scroll;
@@ -17,6 +17,13 @@ export const Title = styled.div`
   font-size: 2rem;
   margin-bottom: 50px;
   animation: 1s ${animations.silding("50vw")} ease-in-out;
+`;
+
+export const ResContatiner = styled.div`
+  width: 60vw;
+  
+  ${mixins.flexContainer("row", "space-around")}
+  flex-wrap: wrap;
 `;
 
 export const BtnContainer = styled.div`
@@ -40,4 +47,3 @@ export const BtnContainer = styled.div`
   }
 `;
 
-export default StyledResult;

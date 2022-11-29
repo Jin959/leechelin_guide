@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import StyledIntro, {
+import {
+  StyledIntro,
   Title,
   ImgContainer,
   ImgWrapper,
