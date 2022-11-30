@@ -23,13 +23,15 @@ const animations = {
     startX = "50vw",
     startY = "50vh",
     endX = "0",
-    endY = "0"
+    endY = "0",
+    rotateFrom = "0",
+    roatateTo = "360deg"
   ) => keyframes`
     from {
-      transform: translate(${startX}, ${startY}) rotate(0);
+      transform: translate(${startX}, ${startY}) rotate(${rotateFrom});
     }
     to {
-      transform: translate(${endX}, ${endY}) rotate(360deg);
+      transform: translate(${endX}, ${endY}) rotate(${roatateTo});
     }
   `,
 

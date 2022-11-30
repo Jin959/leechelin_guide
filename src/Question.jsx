@@ -20,21 +20,26 @@ const Question = () => {
     noIdea: "괜찮다고 생각되는 걸 골라주세요!",
   };
   const tagList = [
-    "일식",
     "중화요리",
-    "파스타",
+    "가정식",
     "한식",
-    "가정식백반",
+    "백반",
     "분식",
-    "타이",
-    "패스트푸드",
+    "국밥",
+    "일식",
+    "돈까스",
+    "태국 요리",
+    "햄버거",
+    "피자",
+    "타코",
+    "치킨",
+    "맥주",
     "갈비탕",
+    "베트남 요리",
     "쌀국수",
     "커피",
-    "차",
-    "담백한",
-    "고소한",
     "술자리",
+    "편의점"
   ];
   const [taggedList, setTaggedList] = useState([]);
   const onClickIdeaBtn = () => {
@@ -74,7 +79,6 @@ const Question = () => {
       const tmpList = [...taggedList, tag];
       setTaggedList(tmpList);
     }
-    console.log(taggedList);
   };
 
   useEffect(() => {

@@ -68,8 +68,7 @@ const Intro = () => {
     <StyledIntro>
       <Title>리든 램지의 리슐랭 가이드</Title>
       <Expalins>
-        뭐 드실지 모르겠다?!? <br />
-        좋은 식당을 추천해드립니다. <br/>
+        식당을 추천해드립니다. <br/>
         브라우저의 위치 접근 권한을 켜주세요!
       </Expalins>
       <ImgContainer>

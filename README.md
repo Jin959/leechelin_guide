@@ -63,7 +63,9 @@
    - 검색을 실행하고 지도를 띄운다.
 
 
-### 참고
+---
+
+## 참고
 
 - [jsconfkorea](https://2019.jsconfkorea.com/about)
 
