@@ -1,5 +1,7 @@
 ## Lee든 램지의 Lee슐랭 가이드
 
+![result_naver_search_api.gif](./result_naver_search_api.gif)
+
 ### Motivation
 
 - 마포에 나오면 어떤 점심을 먹을지 생각하는 것이 과업이다.
@@ -10,9 +12,10 @@
 
 ### Rules
 
-- 기본적으로 리액트를 이용한다.
-
 - 스타일링은 CSS-in-JS 인 styled-componenets를 파일 분할하여 다뤄본다.
+
+  - 컴포넌트 파일은 JSX 파일에 styled-components 파일은 JS 파일에 분할했는데, 이전까지 스타일링 관련 파일을 따로 다루다가 하나의 파일에 모두 다 넣었더니 오히려 불편하다고 느꼈기 때문이다.
+    - 개인적으로 다른 파일로 분할하는 것이 하나의 파일에 다넣은 것보다 편리하다고 느껴 분할 하였다.
 
   - wanted clone 에서 styled-components와 css, sass를 혼용 했는데 styled-components로 통일한다.
 
@@ -26,7 +29,9 @@
 
   - 반면, axios는 모든 HTTP 에러에 대해 reject 하는 Promise를 반환하기 때문에 catch를 사용할 수 있다. 따라서 axios를 사용해본다.
 
-- 상태관리는 무엇으로 할지 아직 정하지 않는다.
+- 많은 State가 필요하지 않을 것 같다는 생각이 들었다. 상태관리는 무엇으로 할지 아직 정하지 않는다.
+
+- 중간에 두개의 버전이 생겨 git branch를 세개로 잡게 되었다. 두개의 dev branch와 master branch를 두고 더욱 나아보이는 것을 택하게 되었다.
 
 ### UI/UX Flow 개요
 
